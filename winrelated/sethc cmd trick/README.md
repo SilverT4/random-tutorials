@@ -59,11 +59,9 @@ The sethc/cmd trick allows users to access a command prompt on the login screen,
 	
 	iii. Click the **Select** button, then navigate to and double click your Windows ISO file.
 	
-	iv. Once your Windows ISO file has been selected, the app UI will update. Click Start.
-	
-		i. You will be asked one last time if you want to continue, as all data will be deleted on your drive. I recommend backing up your files if you want to avoid losing your them.
+	iv. Once your Windows ISO file has been selected, the app UI will update. Click Start. i. You will be asked one last time if you want to continue, as all data will be deleted on your drive. I recommend backing up your files if you want to avoid losing your them.
 		
-		![Data prompt](RufusDataWarn_Host.png)
+	![Data prompt](RufusDataWarn_Host.png)
 		
 	v. Wait for Rufus to finish.
 
@@ -77,24 +75,25 @@ The sethc/cmd trick allows users to access a command prompt on the login screen,
 
 	i. If you held Shift while rebooting, follow the steps below. Otherwise, follow the next set.
 	
-		i. On the "Choose an Option" screen, select either "Use a device" or "Troubleshoot". For this guide, I'll use the Troubleshoot options.
+	i. On the "Choose an Option" screen, select either "Use a device" or "Troubleshoot". For this guide, I'll use the Troubleshoot options.
 		
-			i. To boot your USB drive via the Use a device menu, select "UEFI:Removable Device" or a similar option.
+	i. To boot your USB drive via the Use a device menu, select "UEFI:Removable Device" or a similar option.
 			
-		![Choose an option (Windows 10 VM)](ChAnOpt_10.png)
+	![Choose an option (Windows 10 VM)](ChAnOpt_10.png)
 		
-		ii. Select Advanced options.
+	ii. Select Advanced options.
 		
-		![Troubleshoot menu (Windows 10 VM)](Troubleshoot.png)
+	![Troubleshoot menu (Windows 10 VM)](Troubleshoot.png)
 		
-		iii. Choose "UEFI Firmware Settings", then click Restart.
+	iii. Choose "UEFI Firmware Settings", then click Restart.
 		
-		![Advanced options menu, with UEFI Firmware Settings option highlighted (Windows 10 VM)](UEFIFirm_10.png)
+	![Advanced options menu, with UEFI Firmware Settings option highlighted (Windows 10 VM)](UEFIFirm_10.png)
 		
-		iv. If given a menu like the one below, select the USB drive (or CD-ROM in a Virtual Machine).
-		![UEFI Menu in a virtual machine](UEFIMenu_VM.png)
+	iv. If given a menu like the one below, select the USB drive (or CD-ROM in a Virtual Machine).
+	
+	![UEFI Menu in a virtual machine](UEFIMenu_VM.png)
 		
-		v. If given a menu with options such as F1 for System information, F2 for diagnostics, etc., press the F# key next to "Boot Device Options", then select your USB drive.
+	v. If given a menu with options such as F1 for System information, F2 for diagnostics, etc., press the F# key next to "Boot Device Options", then select your USB drive.
 		
 3. Once on the setup screen, confirm your language settings and click Next.
 
