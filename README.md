@@ -4,4 +4,6 @@ This is a github repository for my random tutorials that I make. As I make more,
 
 ## Current tutorials
 
-**None available yet**
+### Windows-related Tutorials
+
+**[Sethc/Cmd Trick](winrelated/sethc cmd trick/README.md)**
