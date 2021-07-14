@@ -23,9 +23,9 @@ The sethc/cmd trick allows users to access a command prompt on the login screen,
 
 3. Download the ISO if prompted (see image below), or the Media Creation Tool.
 
-![Windows ISO Prompt on Windows XP (VMWare)](WindowsISO_XP.png)
+![Windows ISO Prompt on Windows XP (VMWare)](images/WindowsISO_XP.png)
 
-![Windows Media Creation Tool Page on Windows 10 (VMWare)](MediaCreationToolPage_10.png)
+![Windows Media Creation Tool Page on Windows 10 (VMWare)](images/MediaCreationToolPage_10.png)
 
 4. If you downloaded the ISO, skip to step 6. This step lists the steps for the Media Creation Tool.
 
@@ -33,13 +33,13 @@ The sethc/cmd trick allows users to access a command prompt on the login screen,
 	
 	ii. Accept the EULA. You can't continue without doing so, no matter how much you hate Windows.
 	
-	![EULA Page](MCTEula_10.png)
+	![EULA Page](images/MCTEula_10.png)
 	
 	iii. On the "What do you want to do?" page, select "Create installation media for another PC".
-	![What do you want to do? Create installation media.](MCTAction_10.png)
+	![What do you want to do? Create installation media.](images/MCTAction_10.png)
 	
 	iv. If the computer you need to perform the trick on has a different language and/or architecture (32/64bit) from the PC you're creating the installation media on, uncheck the "Use the recommended options for this PC" box and select your language and architecture.
-	![Language, architecture, and edition](MCTLangArch_10.png)
+	![Language, architecture, and edition](images/MCTLangArch_10.png)
 	
 		i. If Windows mentions your disk not having enough space on your system drive, try deleting some files you don't need and won't miss.
 		
@@ -51,17 +51,17 @@ The sethc/cmd trick allows users to access a command prompt on the login screen,
 
 	i. Download [Rufus](http://rufus.ie/en_US/) and run the executable.
 	
-	![Rufus page in Microsoft Edge on Windows 10 (Host machine)](RufusPage_Host.png)
+	![Rufus page in Microsoft Edge on Windows 10 (Host machine)](images/RufusPage_Host.png)
 	
 	ii. Select the drive corresponding to your USB drive. It may be shown as "NO LABEL" if you haven't labelled your drive.
 	
-	![Rufus UI, drive selection prompt (Host machine)](RufusDrive_Host.png)
+	![Rufus UI, drive selection prompt (Host machine)](images/RufusDrive_Host.png)
 	
 	iii. Click the **Select** button, then navigate to and double click your Windows ISO file.
 	
 	iv. Once your Windows ISO file has been selected, the app UI will update. Click Start. i. You will be asked one last time if you want to continue, as all data will be deleted on your drive. I recommend backing up your files if you want to avoid losing your them.
 		
-	![Data prompt](RufusDataWarn_Host.png)
+	![Data prompt](images/RufusDataWarn_Host.png)
 		
 	v. Wait for Rufus to finish.
 
@@ -79,37 +79,37 @@ The sethc/cmd trick allows users to access a command prompt on the login screen,
 		
 	i. To boot your USB drive via the Use a device menu, select "UEFI:Removable Device" or a similar option.
 			
-	![Choose an option (Windows 10 VM)](ChAnOpt_10.png)
+	![Choose an option (Windows 10 VM)](images/ChAnOpt_10.png)
 		
 	ii. Select Advanced options.
 		
-	![Troubleshoot menu (Windows 10 VM)](Troubleshoot.png)
+	![Troubleshoot menu (Windows 10 VM)](images/Troubleshoot_10.png)
 		
 	iii. Choose "UEFI Firmware Settings", then click Restart.
 		
-	![Advanced options menu, with UEFI Firmware Settings option highlighted (Windows 10 VM)](UEFIFirm_10.png)
+	![Advanced options menu, with UEFI Firmware Settings option highlighted (Windows 10 VM)](images/UEFIFirm_10.png)
 		
 	iv. If given a menu like the one below, select the USB drive (or CD-ROM in a Virtual Machine).
 	
-	![UEFI Menu in a virtual machine](UEFIMenu_VM.png)
+	![UEFI Menu in a virtual machine](images/UEFIMenu_VM.png)
 		
 	v. If given a menu with options such as F1 for System information, F2 for diagnostics, etc., press the F# key next to "Boot Device Options", then select your USB drive.
 		
 3. Once on the setup screen, confirm your language settings and click Next.
 
-![Windows Setup screen at the start (Virtual machine)](WinSetupLang_VM.png)
+![Windows Setup screen at the start (Virtual machine)](images/WinSetupLang_VM.png)
 
 4. Click "Repair your computer". **Do not click Install now.**
 
-![Windows Setup screen after selecting language and input settings, with Repair your computer highlighted. (Virtual machine)](RepairComputer_VM.png)
+![Windows Setup screen after selecting language and input settings, with Repair your computer highlighted. (Virtual machine)](images/RepairComputer_VM.png)
 
 5. Click Troubleshoot.
 
-![Choose an option menu in setup (Virtual machine)](ChAnOpt_Setup.png)
+![Choose an option menu in setup (Virtual machine)](images/ChAnOpt_Setup.png)
 
 6. Click Command Prompt.
 
-![Command Prompt highlighted in Troubleshooting menu (Virtual machine)](Cmd_Setup.png)
+![Command Prompt highlighted in Troubleshooting menu (Virtual machine)](images/Cmd_Setup.png)
 
 7. Type "cd /d C:\Windows\System32" and press enter.
 
@@ -121,18 +121,18 @@ The sethc/cmd trick allows users to access a command prompt on the login screen,
 
 10. Exit the command prompt.
 
-![Command prompt in setup (Virtual machine)](CommandPrompt_Setup.png)
+![Command prompt in setup (Virtual machine)](images/CommandPrompt_Setup.png)
 
 
 ### Using the trick to add a new user
 
 1. Click the "Continue" option in the menu.
 2. Once Windows loads, press the Shift key 5 times in a row. If it worked properly, a command prompt window should now be on screen.
-![Command prompt on the Windows sign-in screen (Windows 10, Virtual machine)](cmd_10Signin.png)
+![Command prompt on the Windows sign-in screen (Windows 10, Virtual machine)](images/cmd_10Signin.png)
 3. Type "net user add AnyNameHere /add" and press enter.
 4. Type "net user AnyNameHere *" and press enter.
 	i. Enter a password. It will not be displayed back to you.
 5. Type "net user localgroup Administrators AnyNameHere /add" and press enter.
 6. Type "exit" and press enter.
 7. Wait for the signin screen to return to the lock screen, then click again and your account should appear on screen!
-![New user added on Sign-in screen (Windows 10 virtual machine)](NewUserAdded_10Signin.png)
+![New user added on Sign-in screen (Windows 10 virtual machine)](images/NewUserAdded_10Signin.png)
