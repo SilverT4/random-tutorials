@@ -289,10 +289,8 @@ This guide will go through how to set up a VMWare Virtual Machine, and install A
 
 	i. Run the following command: `useradd -m -G wheel,power,lp,audio,sys yourname`
 		a. The only limitation on your username is that you **cannot** have capital letters.
-		
 		b. By adding your account to the `wheel` group, you ensure that you can run sudo commands. (You may have to install sudo. Run `pacman -S sudo --noconfirm` if it isn't installed automatically)
-			i. You may have to edit the sudo.conf file by running visudo (add "EDITOR=nano" in front if vim isn't installed) and uncomment the following line: `# %wheel ALL=(ALL) ALL`
-			
+			i. You may have to edit the sudo.conf file by running visudo (add "EDITOR=nano" in front if vim isn't installed) and uncomment the following line: `# %wheel ALL=(ALL) ALL`		
 		c. Run `passwd yourname` and enter a password for your account. **It's recommended to not have the same password as root,** although in a virtual machine it should be fine.
 		
 25. (Recommended if you installed a Desktop Environment) Type `systemctl enable <sddm/gdm/lightdm>`, depending on which Display Manager you installed.
@@ -312,7 +310,7 @@ This guide will go through how to set up a VMWare Virtual Machine, and install A
 	i. Didn't install a terminal? Press CTRL+ALT+F3 to access the tty. (I have a terminal, so my follow as I write strategy will be in a graphical environment as opposed to TTY)
 4. Run the following commands, omitting sudo and "/Desktop/" if you are root.
 	1. `sudo pacman -S base-devel net-tools linux-headers asp` (Press ENTER to use defaults.)
-	2. `for x in {0..6} ; do sudo mkdir -pv /etc/init.d/rc${x}.d ; done
+	2. `for x in {0..6} ; do sudo mkdir -pv /etc/init.d/rc${x}.d ; done`
 	3. `sudo mount -v /dev/cdrom /mnt`
 	4. `mkdir ~/Desktop/VMWTools`
 	5. `tar -xf /mnt/VMwareTools*.tar.gz -C ~/Desktop/VMWTools`
@@ -338,7 +336,8 @@ TimeoutSec=0
 RemainAfterExit=yes
 
 [Install]
-WantedBy=multi-user.target```
+WantedBy=multi-user.target
+```
 6. Enable the new systemd service: `systemctl enable vmwaretools.service`
 
 ## Part 6: Installing a Desktop Environment (Optional)
