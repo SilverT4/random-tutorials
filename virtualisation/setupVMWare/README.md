@@ -286,7 +286,6 @@ This guide will go through how to set up a VMWare Virtual Machine, and install A
 24. (Optional, but recommended if you installed a Desktop Environment) Create a regular user account.
 
 	i. Run the following command: `useradd -m -G wheel,power,lp,audio,sys yourname`
-	
 		a. The only limitation on your username is that you **cannot** have capital letters.
 		
 		b. By adding your account to the `wheel` group, you ensure that you can run sudo commands. (You may have to install sudo. Run `pacman -S sudo --noconfirm` if it isn't installed automatically)
