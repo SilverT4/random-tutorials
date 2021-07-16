@@ -70,8 +70,9 @@ This guide will go through how to set up a VMWare Virtual Machine, and install A
 	i. It's recommended to use a server closer to your location. I went for the arizona.edu mirror.2
 
 5. Click on the archlinux-date-x86_64.iso link.
+	
 	i. Your browser will start downloading the ISO file. This may take between 15-60 minutes or more, depending on your internet connection, which mirror you chose, and your proximity to the mirror.
-		a. For me, this took around 17 minutes with an average of around 600-1000KB/s.
+	**Note:** For me, this took around 17 minutes with an average of around 600-1000KB/s.
 
 ## Part 3: Setting up your virtual machine
 
@@ -86,6 +87,7 @@ This guide will go through how to set up a VMWare Virtual Machine, and install A
 ![VMWare library](images/arch/VMWareLib_Host.png)
 
 4. Select the "Installer disc image file (iso)" radio button, then click Browse and navigate to your Arch ISO. If you didn't change the location, just click Downloads on the left.
+	
 	i. VMWare will warn you that it cannot find an operating system in the image. This is normal for Arch. Just click next.
 ![New Virtual Machine wizard screen](images/arch/selectISO_Host.png)
 5. Select the Linux radio button, then change the Version to "Other Linux 5.x and later kernel 64-bit".
@@ -111,31 +113,31 @@ This guide will go through how to set up a VMWare Virtual Machine, and install A
 	
 	ii. Here are the settings for my example VM:
 	
-		a. Name: Arch Beanux
+	  a. Name: Arch Beanux
+	  	
+	  b. Location: C:\Users\<My Account>\Documents\Virtual Machines\Arch Beanux
+	
+	  c. Version: Workstation 16.x
 		
-		b. Location: C:\Users\<My Account>\Documents\Virtual Machines\Arch Beanux
+	  d. Operating System: Other Linux 5.x and later kernel 64-bit
 		
-		c. Version: Workstation 16.x
+	  e. Hard Disk: 64 GB, Split
 		
-		d. Operating System: Other Linux 5.x and later kernel 64-bit
+	  f. Memory: 2048 MB
 		
-		e. Hard Disk: 64 GB, Split
+	  g. Network Adapter: Bridged
 		
-		f. Memory: 2048 MB
+	  h. Other devices:
 		
-		g. Network Adapter: Bridged
-		
-		h. Other devices:
-		
-			1. 2 CPU cores
+	  1. 2 CPU cores
 			
-			2. CD/DVD
+	  2. CD/DVD
 			
-			3. USB Controller
+	  3. USB Controller
 			
-			4. Printer
+	  4. Printer
 			
-			5. Sound Card
+	  5. Sound Card
 			
 ![Confirm your VM settings](images/arch/ConfVMSet_Host.png)
 
