@@ -224,14 +224,14 @@ This guide will go through how to set up a VMWare Virtual Machine, and install A
 2. Press CTRL+ALT to return control to your host. Then, click Player > Manage > Install VMWare Tools
 	i. ![UAC Icon from Windows 10](/.global/images/UAC.png) If you are prompted for an Administrator password by Windows, enter your password and click Yes.
 3. If you didn't install a desktop environment, skip this step. Otherwise, open a terminal. You can usually hit the WINKEY and type "Terminal" to find it.
-	i. Didn't install a terminal? Press CTRL+ALT+F3 to access the tty. (I have a terminal, so my steps will be graphical)
+	i. Didn't install a terminal? Press CTRL+ALT+F3 to access the tty. (I have a terminal, so my follow as I write strategy will be in a graphical environment as opposed to TTY)
 4. Run the following commands, omitting sudo and "/Desktop/" if you are root.
 	1. `sudo pacman -S base-devel net-tools linux-headers asp` (Press ENTER to use defaults.)
 	2. `for x in {0..6} ; do sudo mkdir -pv /etc/init.d/rc${x}.d ; done
 	3. `sudo mount -v /dev/cdrom /mnt`
 	4. `mkdir ~/Desktop/VMWTools`
-	5. `tar -xf /mnt/VMWareTools*.tar.gz -C ~/Desktop/VMWTools`
-	6. `perl ~/Desktop/VMWTools/vmware-tools-distrib/vmware-install.pl`
+	5. `tar -xf /mnt/VMwareTools*.tar.gz -C ~/Desktop/VMWTools`
+	6. `sudo perl ~/Desktop/VMWTools/vmware-tools-distrib/vmware-install.pl` (Press enter to keep defaults, change only if you want to)
 	7. `asp checkout open-vm-tools`
 	8. `cd open-vm-tools/repos/community-x86_64/`
 	9. `makepkg -s --asdeps`
@@ -247,7 +247,7 @@ Description=VMWare Tools daemon
 
 [Service]
 ExecStart=/etc/init.d/vmware-tools start
-ExecStep=/etc/init.d/vmware-tools stop
+ExecStop=/etc/init.d/vmware-tools stop
 PIDFile=/var/lock/subsys/vmware
 TimeoutSec=0
 RemainAfterExit=yes
