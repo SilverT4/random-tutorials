@@ -248,18 +248,25 @@ This guide will go through how to set up a VMWare Virtual Machine, and install A
 	ii. Uncommenting in the locale.gen file means **deleting the hashtag at the start of a line**, which also applies to various programming languages.
 	
 18. Create the locale.conf file, and set the LANG variable to your language. This is the locale you uncommented in the previous step.
+
 	i. To create this file, run one of the following commands:
+	
 		a. `touch /etc/locale.conf`
+		
 		b. `echo LANG=yourlocale > /etc/locale.conf`
+		
 	ii. If you use the touch command, edit the locale.conf and type "LANG=*yourlocale*", then save and exit.
+	
 19. If you set the keyboard locale to a non-default one, make the changes persistent in vconsole.conf: Run "echo KEYMAP=*your_keymap* > /etc/vconsole.conf"
+
 20. Create a hostname file.
 	
 	i. Run the following command: `echo HOSTNAME > /etc/hostname`, replacing "HOSTNAME" with a name of your choosing. Valid characters are A-Z, 1-9, and hyphen (-). Try to keep it to 15 characters or less.
 	
 21. Add entries to /etc/hosts to match your hostname.
 	
-	i. Like this: ```cat << EOF >> /etc/hosts
+	i. Like this: ```
+	cat << EOF >> /etc/hosts
 	127.0.0.1 localhost
 	::1 localhost
 	127.0.1.1 HOSTNAME.localdomain HOSTNAME
