@@ -228,7 +228,7 @@ This guide will go through how to set up a VMWare Virtual Machine, and install A
 4. Run the following commands, omitting sudo and "/Desktop/" if you are root.
 	1. `sudo pacman -S base-devel net-tools linux-headers asp` (Press ENTER to use defaults.)
 	2. `for x in {0..6} ; do sudo mkdir -pv /etc/init.d/rc${x}.d ; done
-	3. `sudo mount -v /dev/cdrom /mnt` (Replace cdrom with sr0 if this one gives an error)
+	3. `sudo mount -v /dev/cdrom /mnt`
 	4. `mkdir ~/Desktop/VMWTools`
 	5. `tar -xf /mnt/VMWareTools*.tar.gz -C ~/Desktop/VMWTools`
 	6. `perl ~/Desktop/VMWTools/vmware-tools-distrib/vmware-install.pl`
